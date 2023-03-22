@@ -1,3 +1,5 @@
+import { AttributeMapping } from "./attributeMapping";
+
 export abstract class AttributeProvider {
     protected Mappings: AttributeMapping[];
 
