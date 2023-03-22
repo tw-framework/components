@@ -1,4 +1,5 @@
 import "tw"
 
-export * from './core/component'
+export * from './accessibility'
 export * from './containers'
+export * from './core/component'

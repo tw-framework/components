@@ -1,4 +1,6 @@
-abstract class AttributeProvider {
+import { AttributeMapping } from "./attributeMapping";
+
+export abstract class AttributeProvider {
     protected Mappings: AttributeMapping[];
 
     constructor(mappings: AttributeMapping[]) {
