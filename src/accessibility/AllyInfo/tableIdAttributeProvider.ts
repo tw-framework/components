@@ -4,7 +4,7 @@ import { AttributeProvider } from "../attributeProvider";
 const ROOT_TABLE_ID = 'content_value';
 const CHILD_TABLE_CLASS = 'vis';
 
-export default class TableIdAttributeProvider extends AttributeProvider {
+export class TableIdAttributeProvider extends AttributeProvider {
     private static readonly idAttributeArray = [
         'ally_properties_table',
         'ally_players_table',
