@@ -1,9 +1,9 @@
-export interface Attribute {
+interface Attribute {
     name: string;
     value: string;
 }
 
-export type AttributeMapping = {
+type AttributeMapping = {
     element: Element;
     attributes: Attribute[]
 }

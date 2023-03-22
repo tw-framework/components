@@ -1,5 +1,4 @@
 import { Logger } from "../../core/logger";
-import { AttributeMapping } from "../attributeMapping";
 import { AttributeProvider } from "../attributeProvider";
 
 const ROOT_TABLE_ID = 'content_value';
