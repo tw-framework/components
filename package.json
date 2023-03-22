@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/tw-framework/components/issues"
   },
-  "homepage": "https://github.com/tw-framework/components#readme"
+  "homepage": "https://github.com/tw-framework/components#readme",
+  "devDependencies": {
+    "@types/tw": "github:tw-framework/types"
+  }
 }

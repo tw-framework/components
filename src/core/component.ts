@@ -9,12 +9,24 @@ export abstract class Component<THTMLElement extends HTMLElement> {
         this.AnchorElement = anchorElement;
     }
 
-    public render = async(innerHTML: string, where: InsertPosition = 'afterend'): Promise<undefined | THTMLElement> => {
+    public render = async(where: InsertPosition = 'afterend'): Promise<undefined | THTMLElement> => {
         let createdElement = document.createElement(this.elementTagName);
-        createdElement.innerHTML = innerHTML;
+        let element = <THTMLElement> this.AnchorElement.insertAdjacentElement(where, createdElement);
 
-        this.Element = <THTMLElement> this.AnchorElement.insertAdjacentElement(where, createdElement);
+        this.Element = element;
 
-        return this.Element;
+        return element;
+    }
+
+    public renderWithContent = async(body: string, where: InsertPosition = 'afterend'): Promise<undefined | THTMLElement> => {
+        let element = await this.render(where);
+
+        if (!element) {
+            return undefined;
+        }
+
+        element.innerHTML = body;
+        
+        return element;
     }
 }
